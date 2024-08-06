@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Styles for h1 headings */
+h1{
+    font-family: cursive;
+}
+
+/* Center the login container */
+.login-container {
+    width: 80%; 
+    max-width: 400px; 
+    margin: auto; 
+    padding: 20px; 
+    background-color:white;
+    text-align: center; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Style the form elements */
+form {
+    margin-top: 20px; 
+}
+
+label {
+    display: block; 
+    margin-bottom: 5px; 
+}
+
+input[type="text"],
+input[type="password"],
+button {
+    width: calc(100% - 20px); 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    font-size: 16px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    box-sizing: border-box; 
+}
+
+button {
+    background-color:black; 
+    color: white; 
+    cursor: pointer; 
+}
+
+button:hover {
+    background-color: blueviolet; 
+}
+
+.error {
+    color: red; 
+    margin-top: 10px; 
+}
