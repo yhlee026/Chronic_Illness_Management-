@@ -3,22 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Navigation and Login</title>
     <link rel="stylesheet" href="/login.css">
 </head>
 <body>
-    <div class="login-container">
-        <h1>Login</h1>
-        <% if (typeof error !== 'undefined' && error) { %>
-            <p class="error"><%= error %></p>
-        <% } %>
-        <form action="/login" method="POST">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required><br><br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br><br>
-            <button type="submit">Login</button>
-        </form>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <section id="home">
+            <div class="home-content">
+                <div class="introduction">
+                    <h1>Welcome to Our Website</h1>
+                    <p>This is the home section.</p>
+                </div>
+                <div class="login-container">
+                    <h1>Login</h1>
+                    <% if (typeof error !== 'undefined' && error) { %>
+                        <p class="error"><%= error %></p>
+                    <% } %>
+                    <form action="/login" method="POST">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required><br><br>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required><br><br>
+                        <button type="submit">Login</button>
+                    </form>
+                    <p class="signup-link">Don't have an account? <a href="/signup">Sign up now</a></p>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <h1>About Us</h1>
+            <p>This is the about section.</p>
+        </section>
+        <section id="services">
+            <h1>Our Services</h1>
+            <p>This is the services section.</p>
+        </section>
+        <section id="contact">
+            <h1>Contact Us</h1>
+            <p>This is the contact section.</p>
+        </section>
     </div>
 </body>
 </html>
+
