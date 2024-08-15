@@ -50,6 +50,10 @@ app.get('/home', (req, res) => {
     res.render('home'); // Use res.render to render the EJS template
 });
 
+app.get('/signup', (req, res) => {
+    res.render('signup'); // Use res.render to render the EJS template
+});
+
 
 
 // Make the web application listen for HTTP requests

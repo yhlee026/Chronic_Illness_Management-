@@ -1,0 +1,26 @@
+
+.carousel-item {
+    padding: 50px;
+}
+
+.card-container {
+    display: flex;
+    gap: 1rem; 
+    justify-content: center;
+    position: relative;
+    height: 100%; 
+}
+
+.btn-primary {
+    margin-top: auto;
+    display: block; 
+}
+
+.card-img-top{
+    height: 250px;
+}
+
+.carousel-img {
+    height: 500px; 
+    object-fit: cover; 
+}
