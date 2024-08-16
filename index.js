@@ -46,13 +46,24 @@ app.get('/', (req, res) => {
     res.render('login'); // Use res.render to render the EJS template
 });
 
-app.get('/home', (req, res) => {
-    res.render('home'); // Use res.render to render the EJS template
-});
 
-app.get('/signup', (req, res) => {
-    res.render('signup'); // Use res.render to render the EJS template
-});
+
+const signupRoutes = require('./routes/signup');
+app.use('/signup', signupRoutes);
+
+const homeRoutes = require('./routes/home');
+app.use('/home', homeRoutes);
+
+const bookingRoutes = require('./routes/booking');
+app.use('/booking', bookingRoutes);
+
+const recordsRoutes = require('./routes/records'); //
+app.use('/records', recordsRoutes); 
+
+const historyRoutes = require('./routes/history'); //
+app.use('/history', historyRoutes); 
+
+
 
 
 
