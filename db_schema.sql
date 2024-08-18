@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS personal_information (
     d_o_b DATE NOT NULL,
     sex TEXT CHECK(sex IN ('Male', 'Female')),
     mobile_number INTEGER NOT NULL,
-    email TEXT NOT NULL,
+    email TEXT NOT NULL UNIQUE,
     address TEXT NOT NULL,
     unit_number TEXT NOT NULL,
     postal_code INTEGER NOT NULL,
