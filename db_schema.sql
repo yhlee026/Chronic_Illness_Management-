@@ -8,19 +8,19 @@ CREATE TABLE IF NOT EXISTS personal_information (
     last_name TEXT NOT NULL,
     d_o_b DATE NOT NULL,
     sex TEXT CHECK(sex IN ('Male', 'Female')),
-    mobile_number INTEGER NOT NULL,
+    mobile_number TEXT NOT NULL,
     email TEXT NOT NULL UNIQUE,
     address TEXT NOT NULL,
     unit_number TEXT NOT NULL,
-    postal_code INTEGER NOT NULL,
+    postal_code TEXT NOT NULL,
     country TEXT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS login_credentials (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    email TEXT NOT NULL,
+    email TEXT NOT NULL UNIQUE,
     password TEXT NOT NULL,
-    FOREIGN KEY (email) REFERENCES personal_information(email)
+    FOREIGN KEY (email) REFERENCES personal_information(email) ON DELETE CASCADE
 );
 
 COMMIT;
