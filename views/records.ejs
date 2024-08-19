@@ -20,6 +20,52 @@
         </nav>
     </header>
 
+    <!-- search bar for finding medical records -->
+    <form action="/search" method="GET">
+        <input type="text" name="query" placeholder="Search..." required>
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- button to update new records -->
+    <button type="button" class="btn btn-primary">
+        Upload new record
+    </button>
+
+    <!-- table that shows the most recent records (5 records) -->
+
+    <table class="table table-dark table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Date/Time</th>
+            <th scope="col">Type</th>
+            <th scope="col">Doctor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>latest date</td>
+            <td>heart disease</td>
+            <td>Dr Liu</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>second latest date</td>
+            <td>diabetes</td>
+            <td>Dr Tan</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>third latest date</td>
+            <td>colon cancer</td>
+            <td>Dr Lee</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
