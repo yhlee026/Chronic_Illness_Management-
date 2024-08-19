@@ -63,7 +63,8 @@ app.use('/records', recordsRoutes);
 const historyRoutes = require('./routes/history'); //
 app.use('/history', historyRoutes); 
 
-
+const chatRoutes = require('./routes/chat'); //
+app.use('/chat', chatRoutes); 
 
 
 
