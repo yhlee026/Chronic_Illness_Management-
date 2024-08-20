@@ -2,11 +2,11 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
 
-router.get("/signup", (req, res) => {
-  res.render("signup.ejs"); // Render the signup
+router.get("/", (req, res) => {
+  res.render("signup.ejs"); // Render the signup page
 });
 
-router.post("/signup", (req, res) => {
+router.post("/", async (req, res) => {
   const {
     first_name,
     last_name,
@@ -14,6 +14,7 @@ router.post("/signup", (req, res) => {
     sex,
     mobile_number,
     email,
+    user_name,
     address,
     unit_number,
     postal_code,
@@ -21,60 +22,65 @@ router.post("/signup", (req, res) => {
     password,
   } = req.body;
 
-  // Hash the password
-  bcrypt.hash(password, 10, (err, hashedPassword) => {
-    if (err) {
-      console.error(err.message);
-      return res
-        .status(500)
-        .send("An error occurred while processing your reques at first.");
-    }
+  try {
+    // Log incoming request data
+    console.log("Signup Request Data:", req.body);
+
+    // Hash the password
+    const hashedPassword = await bcrypt.hash(password, 10);
+    console.log("Hashed Password:", hashedPassword);
 
     const db = global.db;
 
-    // Insert into personal_information table
-    const insertPersonalInfo = `INSERT INTO personal_information (first_name, last_name, d_o_b, sex, mobile_number, email, address, unit_number, postal_code, country) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
-    db.run(
-      insertPersonalInfo,
-      [
-        first_name,
-        last_name,
-        d_o_b,
-        sex,
-        mobile_number,
-        email,
-        address,
-        unit_number,
-        postal_code,
-        country,
-      ],
-      function (err) {
-        if (err) {
-          console.error(err.message);
-          return res
-            .status(500)
-            .send(
-              "An error occurred while processing your request for personal information."
-            );
-        }
+    // Start transaction
+    await db.run("BEGIN TRANSACTION");
 
-        // Insert into login_credentials table
-        const insertLoginCredentials = `INSERT INTO login_credentials (email, password) VALUES (?, ?)`;
-        db.run(insertLoginCredentials, [email, hashedPassword], function (err) {
-          if (err) {
-            console.error(err.message);
-            return res
-              .status(500)
-              .send(
-                "An error occurred while processing your request password."
-              );
-          } else {
-            res.redirect("/"); // Redirect to another route or page upon success
-          }
-        });
-      }
-    );
-  });
+    // Insert into personal_information table
+    const insertPersonalInfo = `
+      INSERT INTO personal_information 
+      (first_name, last_name, d_o_b, sex, mobile_number, email, user_name, address, unit_number, postal_code, country) 
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+
+    const test = await db.run(insertPersonalInfo, [
+      first_name,
+      last_name,
+      d_o_b,
+      sex,
+      mobile_number,
+      email,
+      user_name,
+      address,
+      unit_number,
+      postal_code,
+      country,
+    ]);
+    console.log(email, test);
+    // Insert into login_credentials table
+    const insertLoginCredentials = `
+      INSERT INTO login_credentials (email, user_name, password) 
+      VALUES (?, ?, ?)`;
+
+    await db.run(insertLoginCredentials, [email, user_name, hashedPassword]);
+
+    // Commit transaction
+    await db.run("COMMIT");
+
+    // Redirect to the login page on successful signup
+    res.redirect("/");
+  } catch (err) {
+    console.error("Detailed Error during signup:", err);
+
+    // Rollback transaction on error
+    //await db.run("ROLLBACK");
+
+    if (err.message.includes("UNIQUE constraint failed")) {
+      res
+        .status(400)
+        .send("Email already exists. Please use a different email.");
+    } else {
+      res.status(500).send("An error occurred while processing your request.");
+    }
+  }
 });
 
 module.exports = router;

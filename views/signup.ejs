@@ -18,7 +18,7 @@
           <div class="card shadow-sm">
             <div class="card-body p-5">
               <h1 class="card-title text-center font-italic">Sign up</h1>
-              <form action="/signup/signup" method="POST">
+              <form action="/signup" method="POST">
                 <div class="mb-4">
                   <label for="first_name" class="form-label">First Name:</label>
                   <input
@@ -80,6 +80,17 @@
                     type="email"
                     id="email"
                     name="email"
+                    class="form-control"
+                    required
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label for="email" class="form-label">Username:</label>
+                  <input
+                    type="user_name"
+                    id="user_name"
+                    name="user_name"
                     class="form-control"
                     required
                   />

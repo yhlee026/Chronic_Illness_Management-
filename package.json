@@ -8,7 +8,7 @@
     "clean-db": "rm database.db #remove the old database",
     "build-db-win": "sqlite3 database.db < db_schema.sql",
     "clean-db-win": "del database.db",
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
@@ -16,11 +16,13 @@
   "description": "",
   "dependencies": {
     "3": "^2.1.0",
+    "await": "^0.2.6",
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "node": "^22.6.0",
+    "nodemon": "^3.1.4",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7"
   }

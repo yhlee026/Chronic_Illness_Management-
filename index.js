@@ -8,37 +8,27 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Set the app to use ejs for rendering
 app.set("view engine", "ejs");
-
+app.use(express.json());
 // Set location of static files
 app.use(express.static(path.join(__dirname, "public"))); // Use path.join to create the correct path
 
 // Set up SQLite
-const sqlite3 = require("sqlite3").verbose();
 
 // Initialize the database
-const dbFile = "./database.db";
+const db = "./database.db";
 const dbSchemaFile = "./db_schema.sql";
 
 const fs = require("fs"); // Require the fs module
 
 // Initialize SQLite database
-global.db = new sqlite3.Database(dbFile, (err) => {
+const sqlite3 = require("sqlite3").verbose();
+global.db = new sqlite3.Database("./database.db", function (err) {
   if (err) {
-    console.error(err.message);
+    console.error(err);
     process.exit(1); // bail out we can't connect to the DB
   } else {
     console.log("Database connected");
     global.db.run("PRAGMA foreign_keys=ON"); // tell SQLite to pay attention to foreign key constraints
-
-    // Run the schema file to create tables and insert initial data
-    const schema = fs.readFileSync(dbSchemaFile, "utf8");
-    global.db.exec(schema, (err) => {
-      if (err) {
-        console.error(err.message);
-      } else {
-        console.log("Database schema created and initial data inserted");
-      }
-    });
   }
 });
 
