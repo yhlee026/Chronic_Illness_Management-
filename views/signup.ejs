@@ -11,44 +11,42 @@
     />
     <title>Sign up</title>
   </head>
-  <body
-    class="d-flex align-items-center justify-content-center bg-light vh-100"
-  >
+  <body class="d-flex justify-content-center bg-light vh-100">
     <div class="container-fluid">
       <div class="row justify-content-center">
-        <div class="col-lg-8 col-xl-6">
-          <div class="card shadow-lg">
+        <div class="col-6">
+          <div class="card shadow-sm">
             <div class="card-body p-5">
               <h1 class="card-title text-center font-italic">Sign up</h1>
-              <form action="/register" method="POST">
+              <form action="/signup" method="POST">
                 <div class="mb-4">
-                  <label for="first-name" class="form-label">First Name:</label>
+                  <label for="first_name" class="form-label">First Name:</label>
                   <input
                     type="text"
-                    id="first-name"
-                    name="first-name"
+                    id="first_name"
+                    name="first_name"
                     class="form-control"
                     required
                   />
                 </div>
 
                 <div class="mb-4">
-                  <label for="last-name" class="form-label">Last Name:</label>
+                  <label for="last_name" class="form-label">Last Name:</label>
                   <input
                     type="text"
-                    id="last-name"
-                    name="last-name"
+                    id="last_name"
+                    name="last_name"
                     class="form-control"
                     required
                   />
                 </div>
 
                 <div class="mb-4">
-                  <label for="dob" class="form-label">Date of Birth:</label>
+                  <label for="d_o_b" class="form-label">Date of Birth:</label>
                   <input
                     type="date"
-                    id="dob"
-                    name="dob"
+                    id="d_o_b"
+                    name="d_o_b"
                     class="form-control"
                     required
                   />
@@ -56,21 +54,21 @@
 
                 <div class="mb-4">
                   <label for="sex" class="form-label">Sex:</label>
-                  <select id="sex" name="sex" class="form-select" required />
-                  <option value="" selected disabled>Select Sex</option>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                </select>
+                  <select id="sex" name="sex" class="form-select" required>
+                    <option value="" selected disabled>Select Sex</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </select>
                 </div>
 
                 <div class="mb-4">
-                  <label for="phone-number" class="form-label"
+                  <label for="mobile_number" class="form-label"
                     >Phone Number:</label
                   >
                   <input
                     type="tel"
-                    id="phone-number"
-                    name="phone-number"
+                    id="mobile_number"
+                    name="mobile_number"
                     class="form-control"
                     required
                   />
@@ -88,33 +86,48 @@
                 </div>
 
                 <div class="mb-4">
-                  <label for="number" class="form-label">Address:</label>
+                  <label for="email" class="form-label">Username:</label>
                   <input
-                    type="tel"
-                    id="number"
-                    name="number"
+                    type="user_name"
+                    id="user_name"
+                    name="user_name"
                     class="form-control"
                     required
                   />
                 </div>
 
                 <div class="mb-4">
-                  <label for="number" class="form-label">Unit Number:</label>
+                  <label for="address" class="form-label">Address:</label>
                   <input
-                    type="tel"
-                    id="number"
-                    name="number"
+                    type="text"
+                    id="address"
+                    name="address"
                     class="form-control"
                     required
                   />
                 </div>
 
                 <div class="mb-4">
-                  <label for="number" class="form-label">Postal Code:</label>
+                  <label for="unit_number" class="form-label"
+                    >Unit Number:</label
+                  >
                   <input
                     type="tel"
-                    id="number"
-                    name="number"
+                    id="unit_number"
+                    name="unit_number"
+                    class="form-control"
+                    required
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label for="postal_code" class="form-label"
+                    >Postal Code:</label
+                  >
+                  <input
+                    type="tel"
+                    id="postal_code"
+                    name="postal_code"
                     class="form-control"
                     required
                   />
@@ -143,13 +156,13 @@
                 </div>
 
                 <div class="mb-4">
-                  <label for="confirm-password" class="form-label"
+                  <label for="confirm_password" class="form-label"
                     >Confirm Password:</label
                   >
                   <input
                     type="password"
-                    id="confirm-password"
-                    name="confirm-password"
+                    id="confirm_password"
+                    name="confirm_password"
                     class="form-control"
                     required
                   />
