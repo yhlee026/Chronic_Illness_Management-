@@ -2,3 +2,43 @@
     background-color:white;
     color:black;
 }
+
+.searchRecord{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    font-size: 30px;
+}
+
+.searchRecord input[type="text"]{
+    width: 50vmax;
+}
+
+.searchRecord button{
+    font-size: 26px;
+}
+
+.updateButton{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+} 
+
+.updateButton button{
+    font-size: 30px;
+}
+
+.recordTable{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:5%;
+}
+
+.recordTable table{
+    height:100px ;
+    font-size: 30px;
+    padding: 50%;
+}
