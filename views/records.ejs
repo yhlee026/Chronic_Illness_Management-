@@ -20,49 +20,67 @@
         </nav>
     </header>
 
-    <!-- search bar for finding medical records -->
-    <form action="/search" method="GET">
-        <input type="text" name="query" placeholder="Search..." required>
-        <button type="submit">Search</button>
-    </form>
+    <div class="searchRecord">
+      <!-- search bar for finding medical records -->
+      <form action="/search" method="GET">
+          <input type="text" name="query" placeholder="Search..." required>
+          <button type="submit" class="btn btn-warning">Search</button>
+      </form>
+    </div>
 
     <!-- button to update new records -->
-    <button type="button" class="btn btn-primary">
-        Upload new record
-    </button>
+     <div class="updateButton">
+      <button type="button" class="btn btn-primary">
+          Upload new record
+      </button>
+    </div>
 
     <!-- table that shows the most recent records (5 records) -->
 
-    <table class="table table-dark table-hover">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Date/Time</th>
-            <th scope="col">Type</th>
-            <th scope="col">Doctor</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>latest date</td>
-            <td>heart disease</td>
-            <td>Dr Liu</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>second latest date</td>
-            <td>diabetes</td>
-            <td>Dr Tan</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>third latest date</td>
-            <td>colon cancer</td>
-            <td>Dr Lee</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="recordTable">
+      <table class="table table-bordered table-striped-columns table-hover">
+          <thead>
+            <tr class="table table-info">
+              <th scope="col">#</th>
+              <th scope="col">Date/Time</th>
+              <th scope="col">Type</th>
+              <th scope="col">Doctor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>latest date</td>
+              <td>heart disease</td>
+              <td>Dr Liu</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>second latest date</td>
+              <td>diabetes</td>
+              <td>Dr Tan</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>third latest date</td>
+              <td>colon cancer</td>
+              <td>Dr Lee</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>fourth latest date</td>
+              <td>prostate cancer</td>
+              <td>Dr Koo</td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>fifth latest date</td>
+              <td>lung cancer</td>
+              <td>Dr Teow</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
 
 
