@@ -54,6 +54,9 @@ app.use("/history", historyRoutes);
 const loginRoutes = require("./routes/login");
 app.use("/login", loginRoutes);
 
+const chatRoutes = require("./routes/chat");
+app.use("/chat", chatRoutes);
+
 // Make the web application listen for HTTP requests
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
