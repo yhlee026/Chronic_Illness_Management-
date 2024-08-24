@@ -1,44 +1,68 @@
-#navitem2{
-    background-color:white;
-    color:black;
+#navitem2 {
+  background-color: white;
+  color: black;
 }
 
-.searchRecord{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5%;
-    font-size: 30px;
+.searchRecord {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+  font-size: 30px;
 }
 
-.searchRecord input[type="text"]{
-    width: 50vmax;
+.searchRecord input[type="text"] {
+  width: 50vmax;
 }
 
-.searchRecord button{
-    font-size: 26px;
+.searchRecord button {
+  font-size: 26px;
 }
 
-.updateButton{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5%;
-} 
-
-.updateButton button{
-    font-size: 30px;
+.updateButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
 }
 
-.recordTable{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin:5%;
+.updateButton button {
+  font-size: 30px;
 }
 
-.recordTable table{
-    height:100px ;
-    font-size: 30px;
-    padding: 50%;
+.recordTable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+}
+
+.recordTable table {
+  height: 100px;
+  font-size: 30px;
+  padding: 50%;
+}
+
+/* Footer */
+.logo {
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+#footer-container {
+  background-color: #306acf;
+  color: white;
+}
+
+#socials-container {
+  display: flex;
+}
+
+.socials-img {
+  width: 20px;
+}
+
+#footer-privacy p a {
+  color: white;
+  text-decoration: underline;
 }
