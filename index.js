@@ -4,15 +4,18 @@ const session = require("express-session");
 const app = express();
 const port = 3000;
 
-// Session configuration
+// Setup express session
 app.use(
   session({
-    secret: "your-secret-key", // Replace with a secure random string
+    secret: "your-secret-key",
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: false }, // Set `secure: true` if using HTTPS
+    cookie: { secure: false }, // Set to true if using HTTPS
   })
 );
+
+var bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Set the app to use ejs for rendering
 app.set("view engine", "ejs");
