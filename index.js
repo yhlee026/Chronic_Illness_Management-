@@ -1,10 +1,18 @@
 const express = require("express");
 const path = require("path"); // Require the path module
+const session = require("express-session");
 const app = express();
 const port = 3000;
 
-var bodyParser = require("body-parser");
-app.use(bodyParser.urlencoded({ extended: true }));
+// Session configuration
+app.use(
+  session({
+    secret: "your-secret-key", // Replace with a secure random string
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false }, // Set `secure: true` if using HTTPS
+  })
+);
 
 // Set the app to use ejs for rendering
 app.set("view engine", "ejs");

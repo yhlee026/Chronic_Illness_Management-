@@ -41,4 +41,29 @@ router.post("/", async (req, res) => {
   }
 });
 
+// // new
+// router.post("/", (req, res) => {
+//   const db = global.db;
+//   const { username, password } = req.body;
+
+//   db.get(
+//     "SELECT id, first_name, last_name FROM personal_information WHERE username = ? AND password = ?",
+//     [username, password],
+//     (err, row) => {
+//       if (err || !row) {
+//         return res.status(401).send("Invalid credentials");
+//       }
+
+//       // Store user ID in session
+//       req.session.userId = row.id;
+//       req.session.firstName = row.first_name;
+//       req.session.lastName = row.last_name;
+
+//       res.redirect("/home");
+//     }
+//   );
+// });
+
+// //
+
 module.exports = router;
