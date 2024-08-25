@@ -66,6 +66,9 @@ app.use('/history', historyRoutes);
 const chatRoutes = require('./routes/chat'); //
 app.use('/chat', chatRoutes); 
 
+const recommendationRoutes = require('./routes/recommendation'); //
+app.use('/recommendation', recommendationRoutes); 
+
 
 
 // Make the web application listen for HTTP requests
