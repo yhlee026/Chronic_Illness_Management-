@@ -2,3 +2,42 @@
     background-color:white;
     color:black;
 }
+
+.tutorial{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.tutorialVideo{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+}
+
+.tutorialText{
+    flex: 1;
+    margin: 5%;
+}
+
+.calendar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.selector{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5%;
+}
+
+.availableDoctor{
+    flex: 1;
+    margin: 5%;
+}

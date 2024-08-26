@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="booking.css">
     <link rel="stylesheet" href="navigation.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -20,25 +21,65 @@
         </nav>
     </header>
 
-    <!-- youtube video for tutorial -->
-    <iframe width="560" height="315" 
-        src="https://youtu.be/zD9PtZ8yBcs" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-    </iframe>
+    
+    <div class="tutorial">
+        <!-- youtube video for tutorial -->
+        <div class="tutorialVideo"> 
+            <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/t_WJktbtd_8" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
 
-    <!-- text for tutorial -->
-    <p>
-        What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </p>
+        <!-- text for tutorial -->
+        <div class="tutorialText">
+            <p>
+                What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+    </div>
 
-    <!-- calendar -->
+    <div class="calendar">
+        <!-- date selector -->
+        <div class="selector">
+            <!-- select date -->
+            <div>
+                <label for="calendar">Choose a date:</label>
+                <input type="date" id="calendar" name="calendar">
+            </div>
 
-    <label for="calendar">Choose a date:</label>
-    <input type="date" id="calendar" name="calendar">
+            <!-- select doctor -->
+            <div>
+                <label for="doctor-select">Choose a doctor:</label>
+                <select id="doctor-select" name="doctor">
+                    <option value="">--Select a doctor--</option>
+                    <option value="doctor1">Doctor 1</option>
+                    <option value="doctor2">Doctor 2</option>
+                    <option value="doctor3">Doctor 3</option>
+                    <option value="doctor4">Doctor 4</option>
+                </select>
+            </div>
+
+            <!-- book button -->
+            <button type="button" class="btn btn-primary mt-2">Book</button>
+
+        </div>
+
+        <!-- available doctors -->
+        <div class="availableDoctor">
+            <ul class="list-group">
+                <li class="list-group-item active" aria-current="true">available Doctors</li>
+                <li class="list-group-item">Doctor 1</li>
+                <li class="list-group-item">Doctor 2</li>
+                <li class="list-group-item">Doctor 3</li>
+                <li class="list-group-item">Doctor 4</li>
+              </ul>
+        </div>
+
+    </div>
 
 
 
