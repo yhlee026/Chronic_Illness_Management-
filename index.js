@@ -68,6 +68,9 @@ app.use("/login", loginRoutes);
 const chatRoutes = require("./routes/chat");
 app.use("/chat", chatRoutes);
 
+const recommendationRoutes = require("./routes/recommendation");
+app.use("/recommendation", recommendationRoutes);
+
 // Make the web application listen for HTTP requests
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);

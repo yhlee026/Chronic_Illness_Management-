@@ -1,0 +1,19 @@
+.grey-background {
+    background-color: #e9ecef; /* Light grey background */
+    padding: 20px; /* Add padding to ensure content doesn't touch the edges */
+    border-radius: 8px; /* Optional: for rounded corners */
+    margin: 10px 0; /* Add vertical margin to separate items */
+}
+.round-image {
+    border-radius: 50%;
+    width: 60px; /* Adjust size as needed */
+    height: 60px; /* Adjust size as needed */
+    margin-right: 15px; /* Space between image and text */
+}
+.contact-item {
+    display: flex;
+    align-items: flex-start; /* Align items at the top of the container */
+}
+.contact-item img {
+    margin-right: 15px; /* Space between image and text */
+}

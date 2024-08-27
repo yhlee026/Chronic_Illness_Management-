@@ -40,8 +40,20 @@ CREATE TABLE IF NOT EXISTS med_records (
     FOREIGN KEY (user) REFERENCES personal_information(email) ON DELETE CASCADE
 );
 
+-- Table to store text messages
+CREATE TABLE IF NOT EXISTS text_messages (
+    message_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    sender_email TEXT NOT NULL,
+    recipient_email TEXT NOT NULL,
+    message_content TEXT NOT NULL,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (sender_email) REFERENCES personal_information(email) ON DELETE CASCADE,
+    FOREIGN KEY (recipient_email) REFERENCES personal_information(email) ON DELETE CASCADE
+);
+
 -- Insert example personal information
 INSERT INTO personal_information ('first_name', 'last_name', 'd_o_b', 'sex', 'mobile_number', 'email', 'user_name', 'address', 'unit_number', 'postal_code', 'country', 'last_login') VALUES ('Yong Hua', 'Lee', '1999-03-23', 'Female', '81234567', 'test@gmail.com', 'YH99', 'Homeless', '01-001', '889900', 'Singapore', '2024-08-01 20:00:00');
+INSERT INTO personal_information ('first_name', 'last_name', 'd_o_b', 'sex', 'mobile_number', 'email', 'user_name', 'address', 'unit_number', 'postal_code', 'country', 'last_login') VALUES ('Sean', 'Liang', '2003-05-31', 'Male', '86527690', 'sender@gmail.com', 'SEAN', 'Homeless', '01-001', '889900', 'Singapore', '2024-08-01 20:00:00');
 
 -- Insert password for example
 -- Password is 1234
