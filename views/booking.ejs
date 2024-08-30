@@ -1,95 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <title>Home Page</title>
-    <link rel="stylesheet" href="booking.css">
-    <link rel="stylesheet" href="navigation.css">
-</head>
+    <link rel="stylesheet" href="booking.css" />
+    <link rel="stylesheet" href="navigation.css" />
+  </head>
 
-<body>
-    <header>
-        <nav>
-            <ul class="nav-links">
-                <li><a id="navitem1" href="/home">Home</a></li>
-                <li><a id="navitem2" href="/records">Medical Records</a></li>
-                <li><a id="navitem3" href="/booking">Booking</a></li>
-                <li><a id="navitem4" href="/history">Consultation History</a></li>
-            </ul>
-        </nav>
-    </header>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar content -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="/home">Home</a></li>
+            <li class="nav-item"><a href="/records">Medical Records</a></li>
+            <li class="nav-item"><a href="/booking">Booking</a></li>
+            <li class="nav-item">
+              <a href="/history">Consultation History</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-    
     <div class="tutorial">
-        <!-- youtube video for tutorial -->
-        <div class="tutorialVideo"> 
-            <iframe width="560" height="315" 
-                src="https://www.youtube.com/embed/t_WJktbtd_8" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-        </div>
+      <!-- youtube video for tutorial -->
+      <div class="tutorialVideo">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/t_WJktbtd_8"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
 
-        <!-- text for tutorial -->
-        <div class="tutorialText">
-            <p>
-                What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-        </div>
+      <!-- text for tutorial -->
+      <div class="tutorialText">
+        <p>
+          What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
+          and typesetting industry. Lorem Ipsum has been the industry's standard
+          dummy text ever since the 1500s, when an unknown printer took a galley
+          of type and scrambled it to make a type specimen book. It has survived
+          not only five centuries, but also the leap into electronic
+          typesetting, remaining essentially unchanged. It was popularised in
+          the 1960s with the release of Letraset sheets containing Lorem Ipsum
+          passages, and more recently with desktop publishing software like
+          Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+      </div>
     </div>
 
     <div class="calendar">
-        <!-- date selector -->
-        <div class="selector">
-            <!-- select date -->
-            <div>
-                <label for="calendar">Choose a date:</label>
-                <input type="date" id="calendar" name="calendar">
-            </div>
-
-            <!-- select doctor -->
-            <div>
-                <label for="doctor-select">Choose a doctor:</label>
-                <select id="doctor-select" name="doctor">
-                    <option value="">--Select a doctor--</option>
-                    <option value="doctor1">Doctor 1</option>
-                    <option value="doctor2">Doctor 2</option>
-                    <option value="doctor3">Doctor 3</option>
-                    <option value="doctor4">Doctor 4</option>
-                </select>
-            </div>
-
-            <!-- book button -->
-            <button type="button" class="btn btn-primary mt-2">Book</button>
-
+      <!-- date selector -->
+      <div class="selector">
+        <!-- select date -->
+        <div>
+          <label for="calendar">Choose a date:</label>
+          <input type="date" id="calendar" name="calendar" />
         </div>
 
-        <!-- available doctors -->
-        <div class="availableDoctor">
-            <ul class="list-group">
-                <li class="list-group-item active" aria-current="true">available Doctors</li>
-                <li class="list-group-item">Doctor 1</li>
-                <li class="list-group-item">Doctor 2</li>
-                <li class="list-group-item">Doctor 3</li>
-                <li class="list-group-item">Doctor 4</li>
-              </ul>
+        <!-- select doctor -->
+        <div>
+          <label for="doctor-select">Choose a doctor:</label>
+          <select id="doctor-select" name="doctor">
+            <option value="">--Select a doctor--</option>
+            <option value="doctor1">Doctor 1</option>
+            <option value="doctor2">Doctor 2</option>
+            <option value="doctor3">Doctor 3</option>
+            <option value="doctor4">Doctor 4</option>
+          </select>
         </div>
 
+        <!-- book button -->
+        <button type="button" class="btn btn-primary mt-2">Book</button>
+      </div>
+
+      <!-- available doctors -->
+      <div class="availableDoctor">
+        <ul class="list-group">
+          <li class="list-group-item active" aria-current="true">
+            available Doctors
+          </li>
+          <li class="list-group-item">Doctor 1</li>
+          <li class="list-group-item">Doctor 2</li>
+          <li class="list-group-item">Doctor 3</li>
+          <li class="list-group-item">Doctor 4</li>
+        </ul>
+      </div>
     </div>
-
-
-
+    <footer>
+        <div class="container-fluid" id="footer-container">
+          <div class="logo">
+            <h1>EasiDoc</h1>
+          </div>
+          <div class="row">
+            <div class="col-sm-5">
+              <h3>Contact us</h3>
+              <div class="contact-info">
+                <p><strong>Email Address:</strong> support@example.com</p>
+                <p><strong>Phone Number:</strong> +123-456-7890</p>
+                <p>
+                  <strong>Physical Address:</strong> 123 Example Street, Suite
+                  456, City, State, ZIP Code
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+            </div>
+            <div class="col-sm-3">
+              <h3>Follow Us</h3>
+              <div class="container" id="socials-container">
+                <div class = "col">
+                  <a href = "https://www.facebook.com"><img src = "images/facebook.png" class = "socials-img"></a>
+                </div>
+                <div class = "col">
+                  <a href = "https://www.instagram.com"><img src = "images/instagram.png" class = "socials-img"></a>
+                </div>
+                <div class = "col">
+                  <a href = "https://www.x.com"><img src = "images/x.png" class = "socials-img"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="footer-privacy">
+          <h3>Privacy</h3>
+          <p>
+              Review our <a href="#">privacy policy</a> to understand how we
+              handle your information.
+            </p>
+        </div>
+      </footer>
     <!-- available doctors -->
 
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
