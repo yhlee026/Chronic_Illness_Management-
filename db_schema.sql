@@ -3,7 +3,6 @@ PRAGMA foreign_keys=ON;
 BEGIN TRANSACTION;
 
 -- Table for personal information
-
 CREATE TABLE IF NOT EXISTS personal_information (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     first_name TEXT NOT NULL,
@@ -34,9 +33,11 @@ CREATE TABLE IF NOT EXISTS login_credentials (
 CREATE TABLE IF NOT EXISTS med_records (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     user TEXT NOT NULL,
+    doc_no TEXT NOT NULL,
     date DATE NOT NULL,
     type TEXT NOT NULL,
     doctor TEXT NOT NULL,
+    report TEXT NOT NULL,
     FOREIGN KEY (user) REFERENCES personal_information(email) ON DELETE CASCADE
 );
 
@@ -60,7 +61,7 @@ INSERT INTO personal_information ('first_name', 'last_name', 'd_o_b', 'sex', 'mo
 INSERT INTO login_credentials ('email', 'user_name', 'password') VALUES ((SELECT email from personal_information WHERE email = 'test@gmail.com'), 'YH99', '$2b$10$Jasv0mDO7PRy.UKSdsf6FuEyZe/mOdP7ThTFn28C3kS0L9EJLscD.');
 
 -- Insert example record for test@gmail.com
-INSERT INTO med_records ('user', 'date', 'type', 'doctor') VALUES ((SELECT email FROM personal_information WHERE email = 'test@gmail.com'), '2023-12-31', 'Blood Test', 'Dr. Lee');
-INSERT INTO med_records ('user', 'date', 'type', 'doctor') VALUES ((SELECT email FROM personal_information WHERE email = 'test@gmail.com'), '2024-03-01', 'Blood Test', 'Dr. Lim');
+INSERT INTO med_records ('user', 'doc_no', 'date', 'type', 'doctor', 'report') VALUES ((SELECT email FROM personal_information WHERE email = 'test@gmail.com'), 'D0012', '2023-12-31', 'Blood Test', 'Dr. Lee', 'Very good');
+INSERT INTO med_records ('user', 'doc_no', 'date', 'type', 'doctor', 'report') VALUES ((SELECT email FROM personal_information WHERE email = 'test@gmail.com'), 'D1033', '2024-03-01', 'Blood Test', 'Dr. Lim', 'Blood sugar elevated');
 
 COMMIT;

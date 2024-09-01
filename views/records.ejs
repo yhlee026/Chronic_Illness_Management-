@@ -12,8 +12,10 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="records.css" />
     <link rel="stylesheet" href="navigation.css" />
+    <link rel="stylesheet" href="footer.css" />
   </head>
   <body>
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <button
@@ -36,9 +38,7 @@
             <li class="nav-item"><a href="/home">Home</a></li>
             <li class="nav-item"><a href="/records">Medical Records</a></li>
             <li class="nav-item"><a href="/booking">Booking</a></li>
-            <li class="nav-item">
-              <a href="/history">Consultation History</a>
-            </li>
+            <li class="nav-item"><a href="/chat">Consultation History</a></li>
           </ul>
         </div>
       </div>
@@ -54,7 +54,7 @@
 
     <!-- button to update new records -->
     <div class="updateButton">
-      <button type="button" class="btn btn-primary">Upload new record</button>
+      <a href="/upload_med" class="btn btn-primary">Upload new record</a>
     </div>
 
     <!-- table that shows the most recent records (5 records) -->
@@ -63,9 +63,10 @@
       <table class="table table-bordered table-striped-columns table-hover">
         <thead>
           <tr class="table table-info">
-            <th scope="col">No.</th>
+            <th scope="col"></th>
+            <th scope="col">Doc No.</th>
             <th scope="col">Date/Time</th>
-            <th scope="col">Type</th>
+            <th scope="col">Doc Type</th>
             <th scope="col">Doctor</th>
           </tr>
         </thead>
@@ -74,6 +75,7 @@
                 <% records.forEach((record, index) => { %>
                     <tr>
                         <th scope="row"><%= index + 1 %></th>
+                        <td><a href="/med_report/<%= record.doc_no %>"><%= record.doc_no %></a></td>
                         <td><%= record.date %></td>
                         <td><%= record.type %></td>
                         <td><%= record.doctor %></td>
@@ -88,6 +90,7 @@
       </table>
     </div>
 
+    <!-- Footer -->
     <footer>
       <div class="container-fluid" id="footer-container">
         <div class="logo">
@@ -96,7 +99,7 @@
         <div class="row">
           <div class="col-sm-5">
             <h3>Contact us</h3>
-            <div class="contact-info">
+            <div class="contact-info" id="contact">
               <p><strong>Email Address:</strong> support@example.com</p>
               <p><strong>Phone Number:</strong> +123-456-7890</p>
               <p>
@@ -106,6 +109,11 @@
             </div>
           </div>
           <div class="col-sm-4">
+            <h3>Business Hours</h2>
+            <div class="business-hours">
+              <p><strong>Monday - Friday:</strong> 9:00 AM - 5:00 PM</p>
+              <p><strong>Saturday - Sunday:</strong> Closed</p>
+            </div>
           </div>
           <div class="col-sm-3">
             <h3>Follow Us</h3>
@@ -122,6 +130,7 @@
           </div>
         </div>
       </div>
+      <br>
       <div class="row" id="footer-privacy">
         <h3>Privacy</h3>
         <p>

@@ -59,9 +59,6 @@ app.use("/booking", bookingRoutes);
 const recordsRoutes = require("./routes/records"); //
 app.use("/records", recordsRoutes);
 
-const historyRoutes = require("./routes/history"); //
-app.use("/history", historyRoutes);
-
 const loginRoutes = require("./routes/login");
 app.use("/login", loginRoutes);
 
@@ -70,6 +67,12 @@ app.use("/chat", chatRoutes);
 
 const recommendationRoutes = require("./routes/recommendation");
 app.use("/recommendation", recommendationRoutes);
+
+const uploadRecRoutes = require("./routes/upload_med");
+app.use("/upload_med", uploadRecRoutes);
+
+const medReportRoutes = require("./routes/med_report");
+app.use("/med_report", medReportRoutes);
 
 // Make the web application listen for HTTP requests
 app.listen(port, () => {

@@ -7,7 +7,6 @@ router.get("/", (req, res) => {
     if (err) {
       next(err); //send the error on to the error handler
     } else {
-      // Render author-home.ejs and pass these in author-home.ejs
       res.render("chat.ejs", { chat_history_rows: chat_history_rows }); // Render the chat
     }
   });

@@ -11,27 +11,3 @@
   padding-bottom: 10%;
   background-color: lightblue;
 }
-
-/* Footer */
-.logo {
-  padding-top: 3%;
-  padding-bottom: 3%;
-}
-
-#footer-container {
-  background-color: #306acf;
-  color: white;
-}
-
-#socials-container {
-  display: flex;
-}
-
-.socials-img {
-  width: 20px;
-}
-
-#footer-privacy p a {
-  color: white;
-  text-decoration: underline;
-}

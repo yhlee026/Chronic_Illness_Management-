@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="home.css" />
     <link rel="stylesheet" href="carousel.css" />
     <link rel="stylesheet" href="navigation.css" />
+    <link rel="stylesheet" href="footer.css" />
   </head>
 
   <body>
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <button
@@ -36,9 +38,7 @@
             <li class="nav-item"><a href="/home">Home</a></li>
             <li class="nav-item"><a href="/records">Medical Records</a></li>
             <li class="nav-item"><a href="/booking">Booking</a></li>
-            <li class="nav-item">
-              <a href="/history">Consultation History</a>
-            </li>
+            <li class="nav-item"><a href="/chat">Consultation History</a></li>
           </ul>
         </div>
       </div>
@@ -344,47 +344,7 @@
         </div>
       </section>
     </div>
-    <!-- <section id="contact">
-        <h1>Contact us</h1>
-        <div class="contact-info">
-          <h2>Contact Information</h2>
-          <p><strong>Email Address:</strong> support@example.com</p>
-          <p><strong>Phone Number:</strong> +123-456-7890</p>
-          <p>
-            <strong>Physical Address:</strong> 123 Example Street, Suite 456,
-            City, State, ZIP Code
-          </p>
-        </div>
-
-        <div class="business-hours">
-          <h2>Business Hours</h2>
-          <p><strong>Monday - Friday:</strong> 9:00 AM - 5:00 PM</p>
-          <p><strong>Saturday - Sunday:</strong> Closed</p>
-        </div>
-
-        <div class="social-media">
-          <h2>Follow Us</h2>
-          <p>
-            <a href="https://www.facebook.com/example" target="_blank"
-              >Facebook</a
-            >
-            |
-            <a href="https://twitter.com/example" target="_blank">Twitter</a> |
-            <a href="https://www.linkedin.com/company/example" target="_blank"
-              >LinkedIn</a
-            >
-          </p>
-        </div>
-
-        <div class="privacy-policy">
-          <h2>Privacy Policy</h2>
-          <p>
-            Review our <a href="#">Privacy Policy</a> to understand how we
-            handle your information.
-          </p>
-        </div>
-      </section>
-    </div> -->
+    <!-- Footer -->
     <footer>
       <div class="container-fluid" id="footer-container">
         <div class="logo">
@@ -393,7 +353,7 @@
         <div class="row">
           <div class="col-sm-5">
             <h3>Contact us</h3>
-            <div class="contact-info">
+            <div class="contact-info" id="contact">
               <p><strong>Email Address:</strong> support@example.com</p>
               <p><strong>Phone Number:</strong> +123-456-7890</p>
               <p>
@@ -403,6 +363,11 @@
             </div>
           </div>
           <div class="col-sm-4">
+            <h3>Business Hours</h2>
+            <div class="business-hours">
+              <p><strong>Monday - Friday:</strong> 9:00 AM - 5:00 PM</p>
+              <p><strong>Saturday - Sunday:</strong> Closed</p>
+            </div>
           </div>
           <div class="col-sm-3">
             <h3>Follow Us</h3>
@@ -419,6 +384,7 @@
           </div>
         </div>
       </div>
+      <br>
       <div class="row" id="footer-privacy">
         <h3>Privacy</h3>
         <p>

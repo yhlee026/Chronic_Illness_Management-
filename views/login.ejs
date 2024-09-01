@@ -10,34 +10,35 @@
     />
     <link rel="stylesheet" href="login.css" />
     <link rel="stylesheet" href="carousel.css" />
+    <link rel="stylesheet" href="navigation.css" />
+    <link rel="stylesheet" href="footer.css" />
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
-      <a class="navbar-brand" href="#">Brand</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar content -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="#about">About</a></li>
+            <li class="nav-item"><a href="#services">Services</a></li>
+            <li class="nav-item"><a href="#contact">Contacts</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -389,48 +390,57 @@
           </button>
         </div>
       </section>
-
-      <section id="contact">
-        <h1>Contact us</h1>
-        <div class="contact-info">
-          <h2>Contact Information</h2>
-          <p><strong>Email Address:</strong> support@example.com</p>
-          <p><strong>Phone Number:</strong> +123-456-7890</p>
-          <p>
-            <strong>Physical Address:</strong> 123 Example Street, Suite 456,
-            City, State, ZIP Code
-          </p>
+    </div>
+    <br>
+    <!-- Footer -->
+    <footer>
+      <div class="container-fluid" id="footer-container">
+        <div class="logo">
+          <h1>EasiDoc</h1>
         </div>
-
-        <div class="business-hours">
-          <h2>Business Hours</h2>
-          <p><strong>Monday - Friday:</strong> 9:00 AM - 5:00 PM</p>
-          <p><strong>Saturday - Sunday:</strong> Closed</p>
+        <div class="row">
+          <div class="col-sm-5">
+            <h3>Contact us</h3>
+            <div class="contact-info" id="contact">
+              <p><strong>Email Address:</strong> support@example.com</p>
+              <p><strong>Phone Number:</strong> +123-456-7890</p>
+              <p>
+                <strong>Physical Address:</strong> 123 Example Street, Suite
+                456, City, State, ZIP Code
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <h3>Business Hours</h2>
+            <div class="business-hours">
+              <p><strong>Monday - Friday:</strong> 9:00 AM - 5:00 PM</p>
+              <p><strong>Saturday - Sunday:</strong> Closed</p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <h3>Follow Us</h3>
+            <div class="container" id="socials-container">
+              <div class = "col">
+                <a href = "https://www.facebook.com"><img src = "images/facebook.png" class = "socials-img"></a>
+              </div>
+              <div class = "col">
+                <a href = "https://www.instagram.com"><img src = "images/instagram.png" class = "socials-img"></a>
+              </div>
+              <div class = "col">
+                <a href = "https://www.x.com"><img src = "images/x.png" class = "socials-img"></a>
+            </div>
+          </div>
         </div>
-
-        <div class="social-media">
-          <h2>Follow Us</h2>
-          <p>
-            <a href="https://www.facebook.com/example" target="_blank"
-              >Facebook</a
-            >
-            |
-            <a href="https://twitter.com/example" target="_blank">Twitter</a> |
-            <a href="https://www.linkedin.com/company/example" target="_blank"
-              >LinkedIn</a
-            >
-          </p>
-        </div>
-
-        <div class="privacy-policy">
-          <h2>Privacy Policy</h2>
-          <p>
-            Review our <a href="#">Privacy Policy</a> to understand how we
+      </div>
+      <br>
+      <div class="row" id="footer-privacy">
+        <h3>Privacy</h3>
+        <p>
+            Review our <a href="#">privacy policy</a> to understand how we
             handle your information.
           </p>
-        </div>
-      </section>
-    </div>
+      </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
