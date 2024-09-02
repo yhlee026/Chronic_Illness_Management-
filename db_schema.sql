@@ -54,6 +54,7 @@ CREATE TABLE IF NOT EXISTS text_messages (
 
 -- Insert example personal information
 INSERT INTO personal_information ('first_name', 'last_name', 'd_o_b', 'sex', 'mobile_number', 'email', 'user_name', 'address', 'unit_number', 'postal_code', 'country', 'last_login') VALUES ('Yong Hua', 'Lee', '1999-03-23', 'Female', '81234567', 'test@gmail.com', 'YH99', 'Homeless', '01-001', '889900', 'Singapore', '2024-08-01 20:00:00');
+
 INSERT INTO personal_information ('first_name', 'last_name', 'd_o_b', 'sex', 'mobile_number', 'email', 'user_name', 'address', 'unit_number', 'postal_code', 'country', 'last_login') VALUES ('Sean', 'Liang', '2003-05-31', 'Male', '86527690', 'sender@gmail.com', 'SEAN', 'Homeless', '01-001', '889900', 'Singapore', '2024-08-01 20:00:00');
 
 -- Insert password for example
