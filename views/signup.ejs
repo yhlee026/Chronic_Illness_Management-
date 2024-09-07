@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,14 +13,20 @@
     <title>Sign up</title>
   </head>
   <body class="d-flex justify-content-center bg-light vh-100">
+    <!-- Boostrap continer for responsive layout -->
     <div class="container-fluid">
+      <!-- Centering the row using bootstrap -->
       <div class="row justify-content-center">
         <div class="col-6">
+          <!-- Bootstrap card fpr form styling and shadow effect -->
           <div class="card shadow-sm">
             <div class="card-body p-5">
+              <!-- Form title with Bootstrap Styling -->
               <h1 class="card-title text-center font-italic">Sign up</h1>
+              <!-- Form element for handling user signup; method set to POST  -->
               <form action="/signup" method="POST">
                 <div class="mb-4">
+                  <!-- first name field with label and input -->
                   <label for="first_name" class="form-label">First Name:</label>
                   <input
                     type="text"
@@ -31,6 +38,7 @@
                 </div>
 
                 <div class="mb-4">
+                  <!-- last name field with label and input -->
                   <label for="last_name" class="form-label">Last Name:</label>
                   <input
                     type="text"
@@ -42,6 +50,7 @@
                 </div>
 
                 <div class="mb-4">
+                  <!-- Date of Birth field with date input type -->
                   <label for="d_o_b" class="form-label">Date of Birth:</label>
                   <input
                     type="date"
@@ -53,6 +62,7 @@
                 </div>
 
                 <div class="mb-4">
+                  <!-- Sex field with dropdown select for Male/Female options -->
                   <label for="sex" class="form-label">Sex:</label>
                   <select id="sex" name="sex" class="form-select" required>
                     <option value="" selected disabled>Select Sex</option>
@@ -62,6 +72,7 @@
                 </div>
 
                 <div class="mb-4">
+                  <!-- Phone number field -->
                   <label for="mobile_number" class="form-label"
                     >Phone Number:</label
                   >
@@ -75,6 +86,7 @@
                 </div>
 
                 <div class="mb-4">
+                  <!-- Email field -->
                   <label for="email" class="form-label">Email:</label>
                   <input
                     type="email"
@@ -86,7 +98,8 @@
                 </div>
 
                 <div class="mb-4">
-                  <label for="email" class="form-label">Username:</label>
+                  <!-- Username field -->
+                  <label for="user_name" class="form-label">Username:</label>
                   <input
                     type="user_name"
                     id="user_name"
@@ -97,6 +110,7 @@
                 </div>
 
                 <div class="mb-4">
+                  <!-- Address field -->
                   <label for="address" class="form-label">Address:</label>
                   <input
                     type="text"
@@ -108,6 +122,7 @@
                 </div>
 
                 <div class="mb-4">
+                  <!-- Unit number field -->
                   <label for="unit_number" class="form-label"
                     >Unit Number:</label
                   >
@@ -121,6 +136,7 @@
                 </div>
 
                 <div class="mb-4">
+                  <!-- Postal code field -->
                   <label for="postal_code" class="form-label"
                     >Postal Code:</label
                   >
@@ -134,6 +150,7 @@
                 </div>
 
                 <div class="mb-4">
+                  <!-- Country field -->
                   <label for="country" class="form-label">Country:</label>
                   <input
                     type="text"
@@ -145,6 +162,7 @@
                 </div>
 
                 <div class="mb-4">
+                  <!-- Password field -->
                   <label for="password" class="form-label">Password:</label>
                   <input
                     type="password"
@@ -156,6 +174,7 @@
                 </div>
 
                 <div class="mb-4">
+                  <!-- Confirm password field to ensure user retypes password -->
                   <label for="confirm_password" class="form-label"
                     >Confirm Password:</label
                   >
@@ -167,7 +186,7 @@
                     required
                   />
                 </div>
-
+                <!-- Submit button styled with Bootstrap -->
                 <button type="submit" class="btn btn-dark w-100">
                   Register
                 </button>
