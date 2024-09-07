@@ -44,25 +44,11 @@
             <!-- Left Column: General Messages -->
             <div class="col-md-4">
                 <div class="collapse d-md-block" id="contacts-container">
-                    <form action="/chat/load-messages" method="post" class="contact-item-form">
+                    <form action="/chat" method="post" class="contact-item-form">
                         <input type="hidden" name="contact_email" value="email1@example.com">
                         <div class="contact-item" onclick="this.closest('form').submit();">
                             <img src="/images/image1.jpg" class="round-image">
                             <h5>Name 1</h5>
-                        </div>
-                    </form>
-                    <form action="/chat/load-messages" method="post" class="contact-item-form">
-                        <input type="hidden" name="contact_email" value="email2@example.com">
-                        <div class="contact-item" onclick="this.closest('form').submit();">
-                            <img src="/images/image2.jpg" class="round-image">
-                            <h5>Name 2</h5>
-                        </div>
-                    </form>
-                    <form action="/chat/load-messages" method="post" class="contact-item-form">
-                        <input type="hidden" name="contact_email" value="email3@example.com">
-                        <div class="contact-item" onclick="this.closest('form').submit();">
-                            <img src="/images/image3.jpg" class="round-image">
-                            <h5>Name 3</h5>
                         </div>
                     </form>
                 </div>
@@ -74,7 +60,7 @@
                 <div class="chat-container">
                     <!-- Align Left -->
                     <div class="d-flex left-chat">
-                        <img src="/images/image1.jpg" class="round-image">
+                        <!-- <img src="/images/image1.jpg" class="round-image"> -->
                         <div class="chat-message">
                             <p>Hello, how are you?</p>
                         </div>
@@ -84,11 +70,11 @@
                         <div class="chat-message">
                             <p>I'm good, thanks! How about you?</p>
                         </div>
-                        <img src="/images/image2.jpg" class="round-image">
+                        <!-- <img src="/images/image2.jpg" class="round-image"> -->
                     </div>
                     <!-- Align Left -->
                     <div class="d-flex left-chat">
-                        <img src="/images/image1.jpg" class="round-image">
+                        <!-- <img src="/images/image1.jpg" class="round-image"> -->
                         <div class="chat-message">
                             <p>Doing well, just working on the project.</p>
                         </div>
@@ -98,7 +84,7 @@
                         <div class="chat-message">
                             <p>Great! Let me know if you need any help.</p>
                         </div>
-                        <img src="/images/image2.jpg" class="round-image">
+                        <!-- <img src="/images/image2.jpg" class="round-image"> -->
                     </div>
 
                     <% for(i=0;i<chat_history_rows.length; i++) { %>
@@ -106,7 +92,7 @@
                             <div class="chat-message">
                                 <p><%= chat_history_rows[i].message_content %></p>
                             </div>
-                            <img src="/images/image2.jpg" class="round-image">
+                            <!-- <img src="/images/image2.jpg" class="round-image"> -->
                         </div>
                     <% } %>
                     

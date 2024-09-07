@@ -12,7 +12,7 @@ router.get("/", (req, res) => {
   });
 });
 
-router.post("/load-messages", (req, res, next) => {
+router.post("/", (req, res, next) => {
   const contact_email = req.body.contact_email;
 
   // Query to fetch messages involving this contact
