@@ -18,6 +18,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
+        <!-- Create menu button when in small scale -->
         <button
           class="navbar-toggler"
           type="button"
@@ -38,27 +39,26 @@
             <li class="nav-item"><a href="/home">Home</a></li>
             <li class="nav-item"><a href="/records">Medical Records</a></li>
             <li class="nav-item"><a href="/booking">Booking</a></li>
-            <li class="nav-item"><a href="/chat">Chat</a></li>
+            <li class="nav-item"><a href="/chat">Consultation history</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
     <div class="searchRecord">
-      <!-- search bar for finding medical records -->
+      <!-- Search bar for finding medical records -->
       <form action="/search" method="GET">
         <input type="text" name="query" placeholder="Search..." required />
         <button type="submit" class="btn btn-warning">Search</button>
       </form>
     </div>
 
-    <!-- button to update new records -->
+    <!-- Button to upload new records -->
     <div class="updateButton">
       <a href="/upload_med" class="btn btn-primary">Upload new record</a>
     </div>
 
-    <!-- table that shows the most recent records (5 records) -->
-
+    <!-- Table that shows the most recent records (5 records) -->
     <div class="recordTable">
       <table class="table table-bordered table-striped-columns table-hover">
         <thead>
@@ -71,6 +71,8 @@
           </tr>
         </thead>
         <tbody>
+            <!-- List to display table content -->
+            <!-- Condition to show records. If no records found, display no records found -->
             <% if (records.length > 0) { %>
                 <% records.forEach((record, index) => { %>
                     <tr>
@@ -93,10 +95,12 @@
     <!-- Footer -->
     <footer>
       <div class="container-fluid" id="footer-container">
+        <!-- Logo -->
         <div class="logo">
           <h1>EasiDoc</h1>
         </div>
         <div class="row">
+          <!-- Contact Information -->
           <div class="col-sm-5">
             <h3>Contact us</h3>
             <div class="contact-info" id="contact">
@@ -108,6 +112,7 @@
               </p>
             </div>
           </div>
+          <!-- Business Hours -->
           <div class="col-sm-4">
             <h3>Business Hours</h2>
             <div class="business-hours">
@@ -115,6 +120,7 @@
               <p><strong>Saturday - Sunday:</strong> Closed</p>
             </div>
           </div>
+          <!-- Social Medias Links -->
           <div class="col-sm-3">
             <h3>Follow Us</h3>
             <div class="container" id="socials-container">
@@ -131,6 +137,7 @@
         </div>
       </div>
       <br>
+      <!-- Privacy message -->
       <div class="row" id="footer-privacy">
         <h3>Privacy</h3>
         <p>

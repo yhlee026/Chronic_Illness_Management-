@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
+// Render upload_med page
 router.get("/", (req, res) => {
   res.render("upload_med.ejs");
 });
@@ -13,6 +14,7 @@ router.post("/", (req, res) => {
   const db = global.db;
 
   db.run(
+    // Query to insert relevant fields into the table
     "INSERT INTO med_records (user, doc_no, date, type, doctor, report) VALUES (?, ?, ?, ?, ?, ?)",
     [userEmail, doc_no, date, type, doctor, report],
     (err) => {

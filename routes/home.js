@@ -3,8 +3,8 @@ const router = express.Router(); // Create an Express router to handle specific 
 
 // Handle GET requests to the root URL ("/") of the router
 router.get("/", (req, res) => {
+  // If the user is logged in, render the home page and pass the user and lastLogin data
   if (req.session.user) {
-    // If the user is logged in, render the home page and pass the user and lastLogin data
     res.render("home.ejs", {
       user: req.session.user, // Pass the logged-in user to the EJS template
       lastLogin: req.session.lastLogin, // Pass the last login time to the EJS template

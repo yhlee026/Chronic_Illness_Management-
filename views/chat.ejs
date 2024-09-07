@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="footer.css" />
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navigation Bar Section-->
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
+        <!-- Menu button when in small scale -->
         <button
           class="navbar-toggler"
           type="button"
@@ -24,16 +25,17 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- Navbar content -->
+        <!--Collapsible Navbar content -->
         <div
           class="collapse navbar-collapse justify-content-end"
           id="navbarSupportedContent"
         >
+        <!-- Navigation Link -->
           <ul class="navbar-nav">
             <li class="nav-item"><a href="/home">Home</a></li>
             <li class="nav-item"><a href="/records">Medical Records</a></li>
             <li class="nav-item"><a href="/booking">Booking</a></li>
-            <li class="nav-item"><a href="/chat">Chat</a></li>
+            <li class="nav-item"><a href="/chat">Consultation history</a></li>
           </ul>
         </div>
       </div>
@@ -48,7 +50,7 @@
                         <input type="hidden" name="contact_email" value="email1@example.com">
                         <div class="contact-item" onclick="this.closest('form').submit();">
                             <img src="/images/image1.jpg" class="round-image">
-                            <h5>Dcotor 1</h5>
+                            <h5>Dr. Lee</h5>
                         </div>
                     </form>
                 </div>
@@ -60,7 +62,6 @@
                 <div class="chat-container">
                     <!-- Align Left -->
                     <div class="d-flex left-chat">
-                        <!-- <img src="/images/image1.jpg" class="round-image"> -->
                         <div class="chat-message">
                             <p>Hello, how are you?</p>
                         </div>
@@ -70,11 +71,9 @@
                         <div class="chat-message">
                             <p>I'm good, thanks! How about you?</p>
                         </div>
-                        <!-- <img src="/images/image2.jpg" class="round-image"> -->
                     </div>
                     <!-- Align Left -->
                     <div class="d-flex left-chat">
-                        <!-- <img src="/images/image1.jpg" class="round-image"> -->
                         <div class="chat-message">
                             <p>Doing well, just working on the project.</p>
                         </div>
@@ -84,7 +83,6 @@
                         <div class="chat-message">
                             <p>Great! Let me know if you need any help.</p>
                         </div>
-                        <!-- <img src="/images/image2.jpg" class="round-image"> -->
                     </div>
 
                     <% for(i=0;i<chat_history_rows.length; i++) { %>
@@ -92,7 +90,6 @@
                             <div class="chat-message">
                                 <p><%= chat_history_rows[i].message_content %></p>
                             </div>
-                            <!-- <img src="/images/image2.jpg" class="round-image"> -->
                         </div>
                     <% } %>
                     
@@ -115,10 +112,12 @@
     <!-- Footer -->
     <footer>
       <div class="container-fluid" id="footer-container">
+        <!-- Logo -->
         <div class="logo">
           <h1>EasiDoc</h1>
         </div>
         <div class="row">
+          <!-- Contact Information -->
           <div class="col-sm-5">
             <h3>Contact us</h3>
             <div class="contact-info" id="contact">
@@ -130,6 +129,7 @@
               </p>
             </div>
           </div>
+          <!-- Business Hours -->
           <div class="col-sm-4">
             <h3>Business Hours</h2>
             <div class="business-hours">
@@ -137,6 +137,7 @@
               <p><strong>Saturday - Sunday:</strong> Closed</p>
             </div>
           </div>
+          <!-- Social Medias Links -->
           <div class="col-sm-3">
             <h3>Follow Us</h3>
             <div class="container" id="socials-container">
@@ -153,6 +154,7 @@
         </div>
       </div>
       <br>
+      <!-- Privacy message -->
       <div class="row" id="footer-privacy">
         <h3>Privacy</h3>
         <p>

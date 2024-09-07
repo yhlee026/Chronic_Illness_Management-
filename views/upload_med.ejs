@@ -14,8 +14,10 @@
   <body>
     <body>
     <div class="container mt-4">
+      <!-- Header for new medical record -->
       <h1>Upload New Medical Record</h1>
       <br>
+      <!-- Form to POST inputs to database -->
       <form action="/upload_med" method="POST">
         <div class="mb-3">
           <label for="doc_no" class="form-label">Document Number</label>
@@ -37,7 +39,9 @@
           <label for="report" class="form-label">Report Results</label>
           <textarea class="form-control" id="report" name="report" rows="3" required></textarea>
         </div>
+        <!-- Back button to records page -->
         <a href="/records" class="btn btn-secondary">Back</a>
+        <!-- Button to submit form -->
         <button type="submit" class="btn btn-secondary">Submit</button>
       </form>
     </div>

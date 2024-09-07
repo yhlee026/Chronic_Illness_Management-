@@ -12,6 +12,7 @@ router.get("/:doc_no", (req, res) => {
   const db = global.db;
 
   db.get(
+    // Query to select all entries in the table
     "SELECT * FROM med_records WHERE doc_no = ?",
     [docNo],
     (err, record) => {

@@ -2,10 +2,11 @@ const express = require("express"); // Require the Express framework
 const router = express.Router(); // Create an Express router to handle specific routes
 const bcrypt = require("bcrypt"); // Require bcrypt for password hashing and comparison
 
-//Hnalde GET request to "/login"
+// Handle GET request to "/login"
 router.get("/login", (req, res) => {
   res.render("login.ejs"); // Render to login route
 });
+
 // Handle POST requests to the root URL ("/") of this router (for user login)
 router.post("/", async (req, res) => {
   const { email, password } = req.body; //extract email and password
@@ -71,17 +72,17 @@ router.post("/", async (req, res) => {
       req.session.lastLogin = await new Promise((resolve, reject) => {
         db.get(
           "SELECT last_login FROM personal_information WHERE email = ?",
-          [email],//query the last login timestamp for the user
+          [email], //query the last login timestamp for the user
           (err, row) => {
             if (err) {
               reject(err);
             } else {
-              resolve(row.last_login);//return the last login timestamp
+              resolve(row.last_login); //return the last login timestamp
             }
           }
         );
       });
-      res.redirect("/home");//redirect the user to the home page if successfully sign in
+      res.redirect("/home"); //redirect the user to the home page if successfully sign in
     } else {
       // If the user doesn't exist or the password is incorrect, render the login page with an error message
       res.render("login.ejs", { error: "Invalid email or password" });

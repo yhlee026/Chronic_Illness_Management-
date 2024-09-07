@@ -24,7 +24,6 @@ app.use(express.json());
 // Set location of static files
 app.use(express.static(path.join(__dirname, "public"))); // Use path.join to create the correct path
 
-
 // Initialize the path to database
 const db = "./database.db";
 const dbSchemaFile = "./db_schema.sql";
@@ -66,9 +65,6 @@ app.use("/login", loginRoutes);
 
 const chatRoutes = require("./routes/chat"); //import chat route
 app.use("/chat", chatRoutes);
-
-const recommendationRoutes = require("./routes/recommendation"); //import recommendation route
-app.use("/recommendation", recommendationRoutes);
 
 const uploadRecRoutes = require("./routes/upload_med"); //import upload_med route
 app.use("/upload_med", uploadRecRoutes);

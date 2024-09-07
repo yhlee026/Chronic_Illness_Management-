@@ -20,7 +20,7 @@
     <!-- Navigation Bar Section-->
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <!-- Nav Bar Toggle function for mobile view -->
+        <!-- Menu button when in small scale -->
         <button
           class="navbar-toggler"
           type="button"
@@ -42,7 +42,7 @@
             <li class="nav-item"><a href="/home">Home</a></li>
             <li class="nav-item"><a href="/records">Medical Records</a></li>
             <li class="nav-item"><a href="/booking">Booking</a></li>
-            <li class="nav-item"><a href="/chat">Chat</a></li>
+            <li class="nav-item"><a href="/chat">Consultation history</a></li>
           </ul>
         </div>
       </div>
@@ -52,7 +52,7 @@
       <div class="container" id="welcome-container">
         <div class="row">
           <div class="col-sm-12">
-            <!-- Display of User's Name and Last Login information -->
+            <!-- Display of user's Name and Last Login information -->
             <p>Welcome,</p>
             <h1><%= user.firstName %> <%= user.lastName %></h1>
             <p>Last login on <%= lastLogin %></p>
@@ -358,7 +358,7 @@
         </div>
       </section>
     </div>
-    <!-- Footer Section-->
+    <!-- Footer -->
     <footer>
       <div class="container-fluid" id="footer-container">
         <!-- Logo -->
@@ -403,6 +403,7 @@
         </div>
       </div>
       <br>
+      <!-- Privacy message -->
       <div class="row" id="footer-privacy">
         <h3>Privacy</h3>
         <p>

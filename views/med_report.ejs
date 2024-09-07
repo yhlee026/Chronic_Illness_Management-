@@ -12,32 +12,39 @@
     <title>Report</title>
   </head>
   <body>
+    <!-- Container for responsive layout -->
     <div class="container mt-4">
       <h1>Medical Report</h1>
       <br />
       <div class="row">
         <div class="col-sm-6">
+          <!-- Display document number -->
           <p><strong>Document Number: </strong> <%= record.doc_no %></p>
         </div>
         <div class="col-sm-6">
+          <!-- Display date -->
           <p><strong>Date: </strong> <%= record.date %></p>
         </div>
       </div>
       <div class="row">
+        <!-- Display test type -->
         <p><strong>Test Type: </strong> <%= record.type %></p>
       </div>
       <div class="row">
+        <!-- Display test performed by -->
         <p><strong>Test Performed By: </strong> <%= record.doctor %></p>
       </div>
       <br />
       <br />
       <div class="row">
+        <!-- Display content of report result -->
         <p><strong>Report Results: </strong> <%= record.report %></p>
       </div>
       <br />
       <br />
       <div class="row">
         <div class="col-sm-2">
+          <!-- Back button to records page -->
           <a href="/records" class="btn btn-secondary">Back to Records</a>
         </div>
       </div>
